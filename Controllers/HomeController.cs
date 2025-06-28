@@ -26,5 +26,12 @@ namespace FutureValue.Controllers
             }
             return View(model);
         }
+
+        [HttpPost]
+        public IActionResult Clear()
+        {
+            ViewBag.FV = 0;
+            return View("Index", new FutureValueModel());
+        }
     }
 }
